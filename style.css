@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' sans-serif;
+    --webkit--user-select: none;
+    color: white;
+}
+
+main{
+    background: #640368;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#header{
+    display: flex;
+    width: 235px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+#header .player{
+    background: #814b9b;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 30px;
+    cursor: pointer;
+    border-radius: 50px;
+    border: solid 4px #560258;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+#header .player:hover{
+    border: solid 4px #300131;
+}
+#header .player-active{
+    opacity: 5;
+    border: solid 4px #300131;
+}
+#header #xPlayerDisplay{
+    color: #0e0588;
+}
+#header #oPlayerDisplay{
+    color: #a00c67;
+}
+#board{
+    display: grid;
+    grid-template-columns: repeat(3, 70px);
+    grid-template-rows: repeat(3, 70px);
+    gap:12px;
+
+}
+#board .cell{
+    background: #814b9b;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s background;
+}
+#board .cell:hover{
+    background: #560258;
+}
+#restartBtn{
+    margin-top: 30px;
+    width: 235px;
+    background: #814b9b;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s background;
+    visibility: hidden;
+}
+#restartBtn:hover{
+    background: #560258;
+}
